@@ -1,0 +1,87 @@
+.container{
+
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    height:calc(100%-80px);
+   
+}
+
+.leftSide{
+    
+   width:51%;
+    
+ 
+ 
+}
+.leftSide img{
+   
+   object-fit: cover;
+   width: 100%;
+   height: calc(100vh - 80px);
+   border-top-right-radius: 200px;
+   padding-top: 3px;
+}
+
+.rightSide{
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+width:49%;
+
+
+
+
+}
+
+
+.rightSide form div{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.rightSide form div input[type="text"],input[type="password"],input[type="email"],input[type="number"]{
+    width:100%;
+    padding:10px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid cyan;
+    margin-top: 3px;
+}
+.rightSide form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    padding:100px;
+}
+
+.rightSide form div input[type="submit"]{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top:20px;
+    background-color: rgb(36, 161, 161);
+    color:white;
+    font-weight: 800;
+    border:none;
+    cursor: pointer;
+}
+
+.rightSide form div input[type="submit"]:hover{
+    background-color: lightblue;
+    color:black;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: rgb(36, 161, 161);
+    color: cyan;
+}

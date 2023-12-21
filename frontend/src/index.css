@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+
+  padding:20px 80px;
+  background-color:rgb(27, 250, 228);
+  display: flex;
+  justify-content:space-between;
+  color: aliceblue;
+}
+
+header ul {
+  display: flex;
+  gap:2.5rem;
+
+}
+.active{
+  border-bottom: 2px solid black;
+}
+
+li{
+  list-style: none;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+}

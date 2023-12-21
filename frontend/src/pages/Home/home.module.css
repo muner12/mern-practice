@@ -1,0 +1,65 @@
+.hero{
+ 
+    display: flex;
+    justify-content: space-between;
+    padding:40px 30px;
+}
+
+
+.heroContent{
+    width: 50%;
+}
+.heroImg{
+    width: 50%;
+}
+
+.heroImg img{
+    width: 100%;
+    height: calc(100vh - 150px);
+}
+
+.heroContent p{
+line-height: 1.8;
+}
+
+.heroButton{
+    margin-top: 15px;
+    
+}
+
+.heroButton a button{
+width:20%;
+height: 10%;
+padding: 10px;
+margin-left: 5px;
+color: white;
+border: none;
+background: rgb(34,193,195);
+background: radial-gradient(circle, rgba(34,193,195,1) 93%, rgba(253,187,45,1) 100%);
+}
+
+.heroButton a button:hover{
+   cursor: pointer;
+  
+}
+
+.wraper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:20dvh;
+    
+}
+
+.wraperOuter{
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.wraperOuter div{
+    width: 15dvw;
+}
