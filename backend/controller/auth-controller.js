@@ -53,6 +53,10 @@ const auth = {
     }
     
   },
+
+  async user(){
+    
+  }
 };
 
 module.exports = auth;
