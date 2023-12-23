@@ -8,5 +8,6 @@ router.route("/auth/register").post(validate(signUpSchema),auth.register);
 router.route("/auth/login").post(auth.login);
 router.route("/auth/user").get(auth.user);
 //comment
+//comment 2
 
 module.exports=router;
