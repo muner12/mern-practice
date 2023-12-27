@@ -1,4 +1,4 @@
-const { model } = require("mongoose");
+
 const {z}=require("zod");
 
 const signUpSchema=z.object({

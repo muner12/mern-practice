@@ -54,7 +54,15 @@ const auth = {
     
   },
 
-  async user(){
+  async user(req,res,next){
+
+    try {
+
+      res.status(200).json({msg:"user data"});
+
+    } catch (error) {
+      
+    }
     
   }
 };

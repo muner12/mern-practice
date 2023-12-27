@@ -6,7 +6,7 @@ const router=express.Router();
 
 router.route("/auth/register").post(validate(signUpSchema),auth.register);
 router.route("/auth/login").post(auth.login);
-router.route("/auth/user").get(auth.user);
+router.route("/auth/user").get(authMiddleware,auth.user);
 //comment
 //comment 2
 //comment 3
