@@ -2,6 +2,7 @@ const express=require("express");
 const auth = require("../controller/auth-controller");
 const signUpSchema=require("../validators/auth-validator");
 const validate=require("../middleware/validate-middleware");
+const authMiddleware=require("../middleware/auth-middleware")
 const router=express.Router();
 
 router.route("/auth/register").post(validate(signUpSchema),auth.register);
