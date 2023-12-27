@@ -57,8 +57,9 @@ const auth = {
   async user(req,res,next){
 
     try {
-
-      res.status(200).json({msg:"user data"});
+      const userData=req.user;
+      console.log(req.userData);
+      res.status(200).json({userData:userData});
 
     } catch (error) {
       
