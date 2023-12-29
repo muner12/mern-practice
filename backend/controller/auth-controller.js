@@ -58,8 +58,8 @@ const auth = {
 
     try {
       const userData=req.user;
-      console.log(req.userData);
-      res.status(200).json({userData:userData});
+      console.log("authController",req.userData);
+      res.status(200).json({userData});
 
     } catch (error) {
       

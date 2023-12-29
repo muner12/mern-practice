@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from "./contact.module.css";
+import { useAuth } from '../../store/auth';
+
 export default function Contact() {
 
 const [contact,setContact]=useState({
@@ -8,6 +10,8 @@ const [contact,setContact]=useState({
   message:""
 
 });
+const {authUserData}=useAuth();
+
 const changeHandler=(e)=>{
   const name=e.target.name;
   const value=e.target.value;
