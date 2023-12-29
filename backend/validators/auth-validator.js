@@ -6,12 +6,12 @@ const signUpSchema=z.object({
     string({required_error:"username is required"})
     .trim()
     .min(3,{message:"usename must be at least 3 charecotors"})
-    .max(100,{message:"username should not be greater than 100 charecotrs"}),
+    .max(100,{message:"username should not be greater than 100 charecters"}),
     email:z.
     string({required_error:"email is required"})
     .trim()
     .email({message:"invalid Email address"})
-    .min(3,{message:"email must be at least 3 charecoters"})
+    .min(3,{message:"email must be at least 3 charecters"})
     .max(100,{message:"email must not be greater than 100"}),
     phone:z.
     string({required_error:"phone is required"})
@@ -21,7 +21,7 @@ const signUpSchema=z.object({
     password:z.
     string({required_error:"password is requied"})
     .trim()
-    .min(7,{message:"password must be greater than 7 charecots"})
+    .min(7,{message:"password must be greater than 7 charecters"})
     .max(100,{message:"password shoud not be greater than 100"})
 })
 

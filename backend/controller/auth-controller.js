@@ -34,8 +34,10 @@ const auth = {
          });
 
     } catch (error) {
-        console.log(error);
-      return res.status(500).json({ message: "internal Server error" });
+        // console.log(error);
+        // return res.status(500).json({ message: "internal Server error" });
+        next(error);
+        
     }
   },
   async login(req,res,next){
