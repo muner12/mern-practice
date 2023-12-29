@@ -2,11 +2,11 @@ require("dotenv").config();
 const express=require("express");
 const dbConnection = require("./utils/database/connection");
 const { PORT } = require("./utils/constants");
-const router = require("./routes/auth-routes");
-const serviceRouter = require("./routes/service-routes");
+const router = require("./routes/routes");
+
 const cors=require('cors');
 const errorMiddleware = require("./middleware/error-middlware");
-const serviceMiddleware = require("./middleware/service-middleware");
+//const serviceMiddleware = require("./middleware/service-middleware");
 //const { PORT } = require("./utils/constants");
 
 
@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use("/api",router);
 
-app.use("/api",serviceRouter)
+
 
 app.use(errorMiddleware);
 

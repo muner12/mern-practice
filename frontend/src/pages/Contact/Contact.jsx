@@ -3,14 +3,15 @@ import styles from "./contact.module.css";
 import { useAuth } from '../../store/auth';
 
 export default function Contact() {
-
+  const {authUserData}=useAuth();
+  console.log(authUserData);
 const [contact,setContact]=useState({
-  username:"",
-  email:"",
+  username:authUserData.username,
+  email:authUserData.email,
   message:""
 
 });
-const {authUserData}=useAuth();
+
 
 const changeHandler=(e)=>{
   const name=e.target.name;
