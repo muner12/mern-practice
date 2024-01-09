@@ -22,9 +22,17 @@ const changeHandler=(e)=>{
   })
 }
 
-const submitHandler=(e)=>{
+const submitHandler=async(e)=>{
 
   console.log(contact);
+
+  try {
+    const response=await fetch("")
+    //error
+  } catch (error) {
+    
+  }
+
   e.preventDefault();
 }
 
