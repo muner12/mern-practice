@@ -24,7 +24,7 @@ const auth = {
             password
         });
       const result= await newUser.save();
-
+//
      return res.status(201)
      .json({
           success:true,
