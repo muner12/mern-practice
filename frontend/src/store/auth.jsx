@@ -26,7 +26,7 @@ export  const AuthProvider=({children})=>{
         });
         if(data.ok){
             const response=await data.json();
-           
+          
             setAuthUserData(response.userData);
         }
        

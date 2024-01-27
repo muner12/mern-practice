@@ -2,15 +2,29 @@ import React, { useState } from 'react'
 import styles from "./contact.module.css";
 import { useAuth } from '../../store/auth';
 
-export default function Contact() {
-  const {authUserData}=useAuth();
-  console.log(authUserData);
-const [contact,setContact]=useState({
-  username:authUserData.username,
-  email:authUserData.email,
-  message:""
+export default  function Contact() {
 
-});
+
+
+  const defaultFormData={
+    username: '',
+    email: '',
+    message: '',
+  }
+  const {authUserData}=useAuth();
+   const[userData,setUserData]=useState(true);
+  const [contact,setContact]=useState(defaultFormData);
+
+   if(authUserData && userData){
+      setContact({
+        username: authUserData.username,
+        email: authUserData.email,
+        message:""
+      })
+
+      setUserData(false);
+   }
+
 
 
 const changeHandler=(e)=>{
@@ -23,17 +37,32 @@ const changeHandler=(e)=>{
 }
 
 const submitHandler=async(e)=>{
+  e.preventDefault();
 
-  console.log(contact);
 
   try {
-    const response=await fetch("")
+    const contact_api_url=import.meta.env.VITE_BACKEND_URL
+    const response=await fetch(`${contact_api_url}/contact`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+
+      },
+      body: JSON.stringify(contact)
+    }
+    )
+    if (response.ok && response.status === 200) {
+      alert('Message sent successfully');
+      setContact({username:contact.username, email:contact.email,message:""});
+    }
     //error
   } catch (error) {
+    console.log(error);
     
   }
 
-  e.preventDefault();
+  
 }
 
   return (
